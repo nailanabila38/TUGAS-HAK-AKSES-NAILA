@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang & Fasilitas Sidang</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+    <div class="main">
+        <div class="header">
+            <div>
+                <h1>Ruang & Fasilitas Sidang</h1>
+                <p>
+                    Kelola data ruang ujian dan fasilitas sidang
+                </p>
+            </div>
+            <a href="tambah-ruang.html" class="btn-tambah">
+    + Tambah Ruangan
+</a>
+
+        </div>
+
+        <div class="statistik">
+            <div class="card">
+                <p>Total Ruangan</p>
+                <h2>15</h2>
+            </div>
+
+            <div class="card">
+                <p>Ruang Aktif</p>
+                <h2>13</h2>
+
+            </div>
+
+            <div class="card">
+                <p>Memiliki Proyektor</p>
+                <h2>10</h2>
+            </div>
+
+
+            <div class="card">
+                <p>Memiliki PC</p>
+                <h2>12</h2>
+            </div>
+
+
+        </div>
+
+        <div class="data-container">
+            <div class="data-header">
+                <h2>Data Ruangan</h2>
+                <div class="filter">
+                    <input
+                        type="text"
+                        placeholder="Cari gedung / ruangan..."
+                    >
+                    <select>
+
+                        <option>
+                            Semua Gedung
+                        </option>
+
+                        <option>
+                            Gedung A
+                        </option>
+
+                        <option>
+                            Gedung B
+                        </option>
+
+                        <option>
+                            Gedung C
+                        </option>
+
+                    </select>
+
+
+                    <select>
+
+                        <option>
+                            Semua Status
+                        </option>
+
+                        <option>
+                            Aktif
+                        </option>
+
+                        <option>
+                            Nonaktif
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>No</th>
+
+                        <th>Gedung</th>
+
+                        <th>Nomor Ruang</th>
+
+                        <th>Kapasitas</th>
+
+                        <th>Proyektor</th>
+
+                        <th>PC</th>
+
+                        <th>Status</th>
+
+                        <th>Aksi</th>
+
+                    </tr>
+
+                </thead>
+
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Gedung A</td>
+
+                        <td>A301</td>
+
+                        <td>30 Orang</td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td>
+                            <span class="status aktif-status">
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-edit">
+                                Edit
+                            </button>
+
+                            <button class="btn-hapus">
+                                Hapus
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Gedung A</td>
+
+                        <td>A302</td>
+
+                        <td>25 Orang</td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td class="tidak">
+                            ✕ Tidak Ada
+                        </td>
+
+                        <td>
+                            <span class="status aktif-status">
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-edit">
+                                Edit
+                            </button>
+
+                            <button class="btn-hapus">
+                                Hapus
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+
+        
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>Gedung B</td>
+
+                        <td>B201</td>
+
+                        <td>40 Orang</td>
+
+                        <td class="tidak">
+                            ✕ Tidak Ada
+                        </td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td>
+                            <span class="status aktif-status">
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-edit">
+                                Edit
+                            </button>
+
+                            <button class="btn-hapus">
+                                Hapus
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>4</td>
+
+                        <td>Gedung B</td>
+
+                        <td>B202</td>
+
+                        <td>20 Orang</td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td class="tersedia">
+                            ✓ Tersedia
+                        </td>
+
+                        <td>
+                            <span class="status aktif-status">
+                                Aktif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-edit">
+                                Edit
+                            </button>
+
+                            <button class="btn-hapus">
+                                Hapus
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+
+                
+
+                    <tr>
+                        <td>5</td>
+                        <td>Gedung C</td>
+                        <td>C101</td>
+                        <td>15 Orang</td>
+                        <td class="tidak">
+                            ✕ Tidak Ada
+                        </td>
+                        <td class="tidak">
+                            ✕ Tidak Ada
+                        </td>
+
+                        <td>
+                            <span class="status nonaktif-status">
+                                Nonaktif
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn-edit">
+                                Edit
+                            </button>
+
+                            <button class="btn-hapus">
+                                Hapus
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

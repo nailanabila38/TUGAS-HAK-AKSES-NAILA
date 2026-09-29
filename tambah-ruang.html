@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Tambah Ruangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="halaman-tambah">
+        <div class="form-box">
+            <h1>Tambah Ruangan</h1>
+
+            <p class="subjudul">
+                Masukkan data ruangan dan fasilitas sidang
+            </p>
+
+
+            <form>
+                <label for="gedung">
+                    Gedung
+                </label>
+
+                <input
+                    type="text"
+                    id="gedung"
+                    placeholder="Contoh: Gedung A"
+                >
+
+                <label for="nomor">
+                    Nomor Ruang
+                </label>
+
+                <input
+                    type="text"
+                    id="nomor"
+                    placeholder="Contoh: A301"
+                >
+
+                <label for="kapasitas">
+                    Kapasitas Ruangan
+                </label>
+
+                <input
+                    type="number"
+                    id="kapasitas"
+                    placeholder="Contoh: 30"
+                >
+
+                <label>
+                    Proyektor
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="proyektor"
+                            value="tersedia"
+                        >
+                        Tersedia
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="proyektor"
+                            value="tidak"
+                        >
+                        Tidak Ada
+                    </label>
+
+                </div>
+
+                <label>
+                    PC
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pc"
+                            value="tersedia"
+                        >
+                        Tersedia
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="pc"
+                            value="tidak"
+                        >
+                        Tidak Ada
+                    </label>
+
+                </div>
+
+                <label for="status">
+                    Status Ruangan
+                </label>
+
+                <select id="status">
+
+                    <option value="aktif">
+                        Aktif
+                    </option>
+
+                    <option value="nonaktif">
+                        Nonaktif
+                    </option>
+
+                </select>
+
+                <div class="tombol-form">
+
+                    <a
+                        href="rooms.html"
+                        class="btn-kembali"
+                    >
+                        Kembali
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="btn-simpan"
+                    >
+                        Simpan Ruangan
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
