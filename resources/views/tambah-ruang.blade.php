@@ -91,7 +91,7 @@
             </select>
 
             <div class="tombol-form">
-                <a href="{{ url('/rooms') }}" class="btn-kembali">
+                <a href="{{ url('/') }}" class="btn-kembali">
                     Kembali
                 </a>
 

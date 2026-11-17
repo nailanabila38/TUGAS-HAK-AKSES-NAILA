@@ -8,6 +8,12 @@
 </head>
 <body>
 
+@php
+    $bolehTambah = auth()->user()->bisa('ruangan', 'create');
+    $bolehEdit   = auth()->user()->bisa('ruangan', 'edit');
+    $bolehHapus  = auth()->user()->bisa('ruangan', 'delete');
+@endphp
+
 <div class="main">
 
     <div class="header">
@@ -16,9 +22,20 @@
             <p>Kelola data ruang ujian dan fasilitas sidang</p>
         </div>
 
-        <a href="{{ url('/tambah-ruang') }}" class="btn-tambah">
-            + Tambah Ruangan
-        </a>
+        <div style="display:flex; gap:10px; align-items:center; white-space:nowrap;">
+            @if($bolehTambah)
+                <a href="{{ url('/tambah-ruang') }}" class="btn-tambah">
+                    + Tambah Ruangan
+                </a>
+            @endif
+
+            <form method="POST" action="{{ route('logout') }}" style="margin:0;">
+                @csrf
+                <button type="submit" class="btn-hapus">
+                    Logout ({{ auth()->user()->name }})
+                </button>
+            </form>
+        </div>
     </div>
 
     <div class="statistik">
@@ -87,21 +104,29 @@
                         </td>
 
                         <td>
-    <a class="btn-edit" href="{{ url('/edit-ruang/' . $row->id) }}">Edit</a>
+                            @if($bolehEdit)
+                                <a class="btn-edit" href="{{ url('/edit-ruang/' . $row->id) }}">Edit</a>
+                            @endif
 
-    <form
-        action="{{ url('/hapus-ruang/' . $row->id) }}"
-        method="POST"
-        style="display:inline"
-        onsubmit="return confirm('Yakin ingin menghapus ruangan ini?');"
-    >
-        @csrf
-        @method('DELETE')
+                            @if($bolehHapus)
+                                <form
+                                    action="{{ url('/hapus-ruang/' . $row->id) }}"
+                                    method="POST"
+                                    style="display:inline"
+                                    onsubmit="return confirm('Yakin ingin menghapus ruangan ini?');"
+                                >
+                                    @csrf
+                                    @method('DELETE')
 
-        <button type="submit" class="btn-hapus">
-            Hapus
-        </button>
-    </form>
+                                    <button type="submit" class="btn-hapus">
+                                        Hapus
+                                    </button>
+                                </form>
+                            @endif
+
+                            @if(!$bolehEdit && !$bolehHapus)
+                                -
+                            @endif
                         </td>
                     </tr>
                 @endforeach

@@ -42,4 +42,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function role()
+{
+    return $this->belongsTo(Role::class);
+}
+
+public function bisa(string $modul, string $aksi = 'view'): bool
+{
+    if (! in_array($aksi, ['view', 'create', 'edit', 'delete'])) {
+        return false;
+    }
+
+    return HakAkses::where('role_id', $this->role_id)
+        ->where("can_$aksi", true)
+        ->whereHas('module', fn ($q) => $q->where('slug', $modul))
+        ->exists();
+}
 }
