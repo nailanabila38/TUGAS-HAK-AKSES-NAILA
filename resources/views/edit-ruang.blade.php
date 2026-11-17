@@ -89,7 +89,7 @@
             </select>
 
             <div class="tombol-form">
-                <a href="{{ url('/rooms') }}" class="btn-kembali">Kembali</a>
+                <a href="{{ url('/') }}" class="btn-kembali">Kembali</a>
                 <button type="submit" class="btn-simpan">
                     Simpan Perubahan
                 </button>
